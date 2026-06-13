@@ -1,0 +1,11 @@
+class Solution:
+    def checkStatus(self, a, b, flag):
+        # Condition 1: exactly one is non-negative and flag is False
+        if ((a >= 0 and b < 0) or (a < 0 and b >= 0)) and not flag:
+            return True
+        
+        # Condition 2: both negative and flag is True
+        if a < 0 and b < 0 and flag:
+            return True
+        
+        return False
